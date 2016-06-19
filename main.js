@@ -47,7 +47,7 @@ casper.thenOpenAndEvaluate(GUP_URL, function(targetDate) {
 }, config.targetDate);
 
 casper.then(function() {
-  this.capture("./img/check-target-date.png");
+  this.capture("./img/select-target-date.png");
 });
 
 // Select wish seats
@@ -70,7 +70,7 @@ casper.thenEvaluate(function(seats) {
 }, config.wishSeats);
 
 casper.then(function() {
-  this.capture("./img/check-target-seats.png");
+  this.capture("./img/select-target-seats.png");
 });
 
 casper.run();
