@@ -7,6 +7,8 @@ var casper = require("casper").create({
   logLevel : "debug"
 });
 
+// var URL = "https://res.cinemacity.co.jp/TicketReserver/studio/movie/510"
+
 var URL = "http://localhost:8888"
 
 var config = JSON.parse(fs.read("config.json"));

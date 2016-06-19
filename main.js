@@ -7,7 +7,11 @@ var config = JSON.parse(fs.read("config.json"));
 
 var casper = require("casper").create({
   verbose : true,
-  logLevel : "debug"
+  logLevel : "debug",
+  viewportSize: {
+    width: 1024,
+    height: 768
+  }
 });
 casper.userAgent("Mozilla/5.0 (Macintosh; Intel Mac OS X 10_11_5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/51.0.2704.84 Safari/537.36");
 
@@ -70,15 +74,16 @@ casper.thenEvaluate(function(config) {
 
       if (j != 0) {
         // Set friends information
-        document.querySelector("#gender_"    + seats[i][j]).selectedIndex = 1;
-        document.querySelector("#age_group_" + seats[i][j]).selectedIndex = 5;
+        $("#gender_"    + seats[i][j]).val("1").change();
+        $("#age_group_" + seats[i][j]).val("13").change();
         if (emails[j - 1]) {
-          document.querySelector("#discount_" + seats[i][j]).selectedIndex = 1;
+          // document.querySelector("#discount_" + seats[i][j]).selectedIndex = 1;
+          $("#discount_" + seats[i][j]).val("1").change();
           document.querySelector("#address_"  + seats[i][j]).value = emails[j - 1];
         }
       }
-      break;
     }
+    break;
   }
 }, config);
 
