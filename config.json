@@ -1,8 +1,9 @@
 {
   "targetDate" : 22,
-  "wish-seats" : [
+  "wishSeats" : [
     [ "F13", "F14" ],
     [ "G7", "G8"],
+    [ "P2", "P21" ],
     [ "C1", "C3" ]
   ]
 }

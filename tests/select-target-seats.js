@@ -9,7 +9,7 @@ var casper = require("casper").create({
 
 var URL = "http://localhost:8888"
 
-var wishSeats = JSON.parse(fs.read("config.json"))["wish-seats"];
+var wishSeats = JSON.parse(fs.read("config.json")).wishSeats;
 // var wishSeats = [["F1", "F2"], ["B6", "B5"]];
 
 var t = Date.now();
