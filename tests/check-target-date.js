@@ -1,35 +1,37 @@
 "use strict";
-var system = require("system");
 
-/**
- *  1. ページを開く
- *  2. 目的の日付をクリックする
- *  3. 空いている席の内、最も指定した席に近いものを指定する
- *  4. 申し込む
- */
+var fs     = require("fs");
 
-var casper = require("casper").create();
-var URL = "https://res.cinemacity.co.jp/TicketReserver/login"
+var casper = require("casper").create({
+  verbose : true,
+  logLevel : "debug"
+});
+
+var URL = "http://localhost:8888"
+
+var targetDate = JSON.parse(fs.read("config.json")).targetDate;
 
 var t = Date.now();
 
 casper.start(URL, function() {
+  this.echo("targetDate: " + targetDate);
   this.echo("Title: " + this.getTitle());
   this.echo("Loading time: " + (Date.now() - t) + "ms");
 });
 
-casper.thenEvaluate(function(email, password) {
-  document.querySelector("input#login_email_address").value = email;
-  document.querySelector("input#login_password").value = password;
-  document.querySelector("#login_button").click();
-}, system.env.EMAIL, system.env.PASSWORD);
+casper.thenEvaluate(function(targetDate) {
+  dates = document.querySelectorAll('#rdb ul li');
+  dates[0].querySelector("a").click();
+  for (var i = 0; i < dates.length; i++) {
+    if (dates[i].querySelector(".rdb-day").innerHTML == targetDate + "日") {
+      dates[i].querySelector("a").click();
+    }
+  }
+
+}, targetDate);
 
 casper.then(function() {
-  this.capture("./img/login1.png");
-})
-
-casper.thenOpen("https://res.cinemacity.co.jp/TicketReserver/mypage", function() {
-  this.capture("./img/login2.png");
+  this.capture("./img/check-target-date.png");
 });
 
 casper.run();

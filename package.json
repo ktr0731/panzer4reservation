@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/lycoris0731/panzer4reservation#readme",
   "dependencies": {
-    "casperjs": "^1.1.1"
+    "casperjs": "^1.1.1",
+    "spooky": "^0.2.5"
   }
 }
