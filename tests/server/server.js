@@ -1,3 +1,5 @@
+// Referenced from http://qiita.com/_shimizu/items/094c4beace9c7a36deb1
+
 var http = require("http"),
     url = require("url"),
     path = require("path"),
