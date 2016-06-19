@@ -9,6 +9,7 @@ var casper = require("casper").create({
   verbose : true,
   logLevel : "debug"
 });
+casper.userAgent("Mozilla/5.0 (Macintosh; Intel Mac OS X 10_11_5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/51.0.2704.84 Safari/537.36");
 
 var GUP_URL= "https://res.cinemacity.co.jp/TicketReserver/studio/movie/510";
 // var GUP_URL= "http://localhost:8888";
@@ -51,8 +52,11 @@ casper.then(function() {
 });
 
 // Select wish seats
-// casper.thenOpen(GUP_URL, function(seats) {
-casper.thenEvaluate(function(seats) {
+// casper.thenEvaluate(GUP_URL, function(config) {
+casper.thenEvaluate(function(config) {
+  var seats = config.wishSeats;
+  var emails = config.emails;
+
   firstLoop : for (var i = 0; i < seats.length; i++) {
     for (var j = 0; j < seats[i].length; j++) {
       if (document.querySelector("#" + seats[i][j] + "_base").className == "reserved") {
@@ -60,14 +64,23 @@ casper.thenEvaluate(function(seats) {
       }
     }
 
-    // All seat are vacancy
+    // All seat are vacancy.
     for (var j = 0; j < seats[i].length; j++) {
       document.querySelector("#" + seats[i][j]).click();
-    }
-    break;
-  }
 
-}, config.wishSeats);
+      if (j != 0) {
+        // Set friends information
+        document.querySelector("#gender_"    + seats[i][j]).selectedIndex = 1;
+        document.querySelector("#age_group_" + seats[i][j]).selectedIndex = 5;
+        if (emails[j - 1]) {
+          document.querySelector("#discount_" + seats[i][j]).selectedIndex = 1;
+          document.querySelector("#address_"  + seats[i][j]).value = emails[j - 1];
+        }
+      }
+      break;
+    }
+  }
+}, config);
 
 casper.then(function() {
   this.capture("./img/select-target-seats.png");
