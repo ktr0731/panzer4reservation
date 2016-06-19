@@ -70,25 +70,45 @@ casper.thenEvaluate(function(config) {
 
     // All seat are vacancy.
     for (var j = 0; j < seats[i].length; j++) {
-      document.querySelector("#" + seats[i][j]).click();
+      $("#" + seats[i][j]).trigger("click");
 
       if (j != 0) {
         // Set friends information
         $("#gender_"    + seats[i][j]).val("1").change();
         $("#age_group_" + seats[i][j]).val("13").change();
-        if (emails[j - 1]) {
+        // if (emails[j - 1]) {
           // document.querySelector("#discount_" + seats[i][j]).selectedIndex = 1;
-          $("#discount_" + seats[i][j]).val("1").change();
-          document.querySelector("#address_"  + seats[i][j]).value = emails[j - 1];
-        }
+        //   $("#discount_" + seats[i][j]).val("1").change();
+        //   $("#address_"  + seats[i][j]).val(emails[j - 1]).change();
+        // }
       }
     }
+    $("#reserve-now-button").trigger("click");
     break;
   }
 }, config);
 
 casper.then(function() {
   this.capture("./img/select-target-seats.png");
+  this.echo(phantom.cookies);
+});
+
+casper.then(function() {
+  this.wait(2000, function() {
+    this.echo("Title" + this.getTitle());
+    this.capture("./img/confirmation.png");
+
+    this.then(function() {
+      $("settle_tickets_with_last_card").trigger("click");
+    });
+  });
+});
+
+casper.then(function() {
+  this.wait(3000, function() {
+    this.echo("Title" + this.getTitle());
+    this.capture("./img/finish.png");
+  });
 });
 
 casper.run();
