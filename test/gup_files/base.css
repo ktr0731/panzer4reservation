@@ -1,0 +1,614 @@
+@charset "utf-8";
+
+html, body {
+	margin: 0;
+	padding: 0;
+	width: 100%;
+	height: 100%;
+}
+
+body {
+	background: #fff;
+	font: 12px 'ヒラギノ角ゴ Pro W3', 'Hiragino Kaku Gothic Pro', 'メイリオ', Meiryo,
+		'ＭＳ Ｐゴシック', Osaka, sans-serif;
+}
+
+h1, h2, h2, h3, h4, h5, h6, p {
+	margin: 0;
+	padding: 0;
+}
+
+h1 {
+	font-size: 21px;
+}
+
+h1 {
+	font-size: 18px;
+}
+
+h2 {
+	font-size: 16px;
+}
+
+img {
+	border: 0;
+	border-style: none;
+}
+
+a {
+	text-decoration: none;
+}
+
+a img {
+	border-style: none;
+}
+
+.clearfix:after {
+	content: "."; /* 新しいコンテンツ */
+	display: block;
+	clear: both;
+	height: 0;
+	visibility: hidden; /* 非表示に */
+}
+/*  ヘッダー１ */
+#logo {
+	float: left;
+	height: 24px;
+	margin-right: 30px;
+}
+
+#mypage a {
+	display: block;
+	float: right;
+	height: 24px;
+	line-height: 25px;
+	color: #fff;
+	text-decoration: none;
+	margin: 0;
+	padding: 0 10px;
+	background: #003E72;
+}
+
+#mypage a:hover {
+	background: #00A0E8;
+}
+
+#mypage-selected a {
+	display: block;
+	float: right;
+	height: 24px;
+	line-height: 25px;
+	color: #fff;
+	text-decoration: none;
+	margin: 0;
+	padding: 0 10px;
+	background: #00A0E8;
+}
+
+#top-right-mypage a {
+	display: block;
+	float: right;
+	height: 24px;
+	line-height: 25px;
+	color: #003E72;
+	text-decoration: none;
+	margin: 0;
+	padding: 0 10px;
+	background: #f60;
+}
+
+#top-right-mypage a:hover {
+	background: #00A0E8;
+}
+
+.login-here {
+	display: block;
+	float: right;
+	height: 24px;
+	font-size: 11px;
+	line-height: 25px;
+	color: #FFF;
+	margin-right: 5px;
+}
+
+#header1 {
+	display: block;
+	width: 100%;
+	height: 24px;
+	margin: 0;
+	padding: 0;
+	background: #003E72;
+	border-bottom: #00A0E8 4px solid;
+}
+
+#header1-menu {
+	display: block;
+	width: 960px;
+	margin: 0 auto;
+	padding: 0;
+}
+
+#header1-menu ul {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+#header1-menu li {
+	display: inline;
+	padding: 0;
+	margin: 0;
+	float: left;
+}
+
+#header1-menu li a {
+	display: block;
+	height: 24px;
+	line-height: 25px;
+	white-space: nowrap;
+	text-decoration: none;
+	text-align: center;
+	color: #fff;
+	padding: 0 10px;
+}
+
+* html #header1-menu li a {
+	width: 20px;
+}
+
+#header1-menu li a:hover {
+	background: #00A0E8;
+}
+
+#header1-menu .selected {
+	display: block;
+	height: 24px;
+	line-height: 25px;
+	white-space: nowrap;
+	text-decoration: none;
+	text-align: center;
+	color: #fff;
+	background: #00A0E8;
+}
+/*  ヘッダー2 */
+#header2 {
+	clear: both;
+	display: block;
+	width: 100%;
+	height: 24px;
+	margin: 0;
+	padding: 0;
+	background: #00A0E8;
+}
+
+#header2-menu {
+	display: block;
+	width: 960px;
+	margin: 0 auto;
+	padding: 0;
+}
+
+#header2-menu ul {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+#header2-menu li {
+	display: inline;
+	padding: 0;
+	margin: 0;
+	float: left;
+}
+
+#header2-menu li a {
+	display: block;
+	height: 24px;
+	line-height: 25px;
+	white-space: nowrap;
+	text-decoration: none;
+	text-align: center;
+	color: #fff;
+	padding: 0 10px;
+}
+
+* html #header2-menu li a {
+	width: 20px;
+}
+
+#header2-menu li a:hover {
+	display: block;
+	height: 24px;
+	line-height: 25px;
+	white-space: nowrap;
+	text-decoration: none;
+	text-align: center;
+	color: #003E72;
+	padding: 0 10px;
+	background: #fff;
+}
+
+#header2-menu .selected {
+	display: block;
+	height: 24px;
+	line-height: 25px;
+	white-space: nowrap;
+	text-decoration: none;
+	text-align: center;
+	color: #003E72;
+	padding: 0 10px;
+	background: #fff;
+}
+
+#cinemacity-info {
+	width: 954px;
+	margin: 0 auto;
+	border: #999 1px dotted;
+	padding: 3px;
+	margin-top: 3px;
+}
+
+.info-title {
+	font-weight: bold;
+	color: #003E72;
+	margin: 0 3px;
+}
+/*  スライダー  */
+#slider {
+	width: 960px;
+	margin: 5px auto 0;
+}
+
+.list_carousel ul {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	display: block;
+}
+
+.list_carousel li {
+	text-align: center;
+	width: 120px;
+	height: 170px;
+	padding: 0;
+	margin: 0;
+	display: block;
+	float: left;
+}
+
+.list_carousel img {
+	border: 1px #aaa solid;
+}
+
+.list_carousel.responsive {
+	width: auto;
+	margin-left: 0;
+}
+
+#top-main {
+	clear: both;
+	width: 960px;
+	margin: 3px auto 5px;
+}
+
+#main {
+	clear: both;
+	width: 960px;
+	margin: 5px auto;
+	min-height: 600px;
+}
+
+#header3 {
+	width: 960px;
+	margin: 5px auto;
+}
+/*  パンくず */
+#breadcrumb {
+	float: left;
+	margin-bottom: 5px;
+	font-size: 10px;
+	min-width: 320px;
+}
+
+/*  各ページタイトル */
+#page-title {
+	clear: both;
+}
+/*  フッター */
+#footer {
+	clear: both;
+	background: #eee;
+	bottom: 0;
+	width: 100%;
+	margin: 0;
+	padding: 0;
+	height: 80px;
+	bottom: 0;
+}
+
+#footer a {
+	color: #333;
+	text-decoration: none;
+}
+
+#footer a:hover {
+	color: #999;
+	text-decoration: none;
+}
+
+#footer-menu {
+	width: 960px;
+	margin: 0 auto;
+}
+
+#footer-menu-left {
+	margin: 0;
+	padding-top: 5px;
+}
+
+#footer-menu-left ul li {
+	display: inline;
+	margin-left: 10px;
+	padding-left: 10px;
+	border-left: 1px dotted #000;
+}
+
+#footer-menu-left ul li:first-child, #footer-menu-left ul li.firstChild
+	{
+	margin-left: 0;
+	padding-left: 0;
+	border-left: 0;
+}
+
+#copyright {
+	float: right;
+	font-family: Verdana, Geneva, sans-serif;
+	padding-bottom: 10px;
+}
+/* ビッグバナースライド */
+#big-banner {
+	background: #000;
+	padding: 0;
+}
+
+#big-banner img {
+	margin: 18px 0;
+}
+
+/* トピックス */
+#topics {
+	list-style-type: none;
+	margin: 10px 0 0;
+	padding: 0;
+}
+
+#topics #feed {
+	border: #003E72 1px solid;
+	*padding: 10px 0;
+}
+
+#topics li {
+	width: 580px;
+	padding: 0 15px;
+	*padding: 0;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+
+.block-title {
+	display: block;
+	background: #003E72;
+	margin-bottom: 0;
+	padding: 5px 10px;
+	color: #fff;
+	font-family: "Arial Black", Gadget, sans-serif;
+}
+
+#banners {
+	padding: 0;
+	margin: 0;
+}
+
+#banners img {
+	margin-bottom: 5px;
+}
+
+#banner1, #banner2 {
+	
+}
+/*  プルダウン　*/
+#pulldowns {
+	width: 960px;
+	text-align: center;
+	padding: 7px 0;
+	background-color: #003E72;
+	margin-bottom: 10px;
+}
+
+#pulldowns h3 {
+	color: #FFF;
+}
+
+.pulldown {
+	width: 234px;
+	height: 30px;
+}
+
+#wrapper960 {
+	clear: both;
+	width: 960px;
+	margin: 0 0 10px 0;
+	padding: 0;
+}
+
+#wrapper760 {
+	clear: both;
+	width: 760px;
+	margin: 0 auto 10px;
+	padding: 0;
+}
+
+#wrapper640 {
+	width: 640px;
+	float: left;
+	margin: 0 0 10px 0;
+	padding: 0;
+}
+
+#wrapper300 {
+	width: 300px;
+	float: right;
+	margin: 0 0 10px 0;
+	padding: 0;
+}
+
+#wrapper300:after {
+	content: "."; /* 新しいコンテンツ */
+	display: block;
+	clear: both;
+	height: 0;
+	visibility: hidden; /* 非表示に */
+}
+
+#wrapper480-l {
+	width: 480px;
+	float: left;
+	margin: 0 0 10px 0;
+	padding: 0;
+}
+
+#wrapper480-r {
+	width: 480px;
+	float: right;
+	margin: 0 0 10px 0;
+	padding: 0;
+}
+
+#wrapper480-r:after {
+	content: "."; /* 新しいコンテンツ */
+	display: block;
+	clear: both;
+	height: 0;
+	visibility: hidden; /* 非表示に */
+}
+
+#calendar300 caption {
+	background-color: #003E72;
+	color: #FFF;
+}
+
+#howtoreserve h3 {
+	color: #FF2626;
+}
+
+#howtoreserve ul {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+/* 料金改定告知 */
+.banner-text {
+	width: 280px;
+	padding: 0;
+	margin: 10px;
+}
+
+#price-change-banner {
+	width: 300px;
+	height: 125px;
+	background-image: url(../images/price_change_banner.jpg);
+}
+
+#price-change-list {
+	background-color: #fffed9;
+}
+
+#price-change-list .orange {
+	color: #ea5514;
+}
+
+.price-change01 {
+	text-align: center;
+	padding: 5px 0;
+	background-color: #e60012;
+	color: #FFF;
+}
+
+.price-change02 {
+	text-align: center;
+	padding: 5px 0;
+	background-color: #a39279;
+	color: #FFF;
+	margin-top: 10px;
+}
+
+.price-change03 {
+	text-align: center;
+	padding: 5px 0;
+	background-color: #54aa22;
+	color: #FFF;
+	margin-top: 10px;
+}
+
+.price-change-bottom {
+	text-align: center;
+	padding: 10px;
+}
+
+#top-price-list {
+	background-color: #fffed9;
+	clear: both;
+	width: 960px;
+	margin: 0 auto;
+}
+
+#top-price-list h3 {
+	color: #FFF;
+	padding: 6px 0;
+	*padding: 3px 0;
+}
+
+#top-price-list .orange {
+	color: #ea5514;
+}
+
+#top-price-list p {
+	padding: 10px;
+}
+
+#top-price-list td {
+	border-style: hidden;
+}
+
+.lock-screen {
+	z-index: 999;
+	position: fixed;
+	top: 0px;
+	left: 0px;
+	width: 100%;
+	height: 100%;
+	background-color: gray;
+	opacity: 0.8;
+}
+#go-mypage {
+	width:280px;
+	height:50px;
+	border: 1px solid #15aeec;
+	margin:5px;
+	padding:15px;
+	background-color: #49c0f0;
+	background-image: -webkit-linear-gradient(top, #49c0f0, #2cafe3);
+	background-image: linear-gradient(to bottom, #49c0f0, #2cafe3);
+	border-radius: 4px;
+	color: #fff;
+	font-size:16px;
+	line-height: 9px;
+	-webkit-transition: none;
+	transition: none;
+	text-decoration:none;
+	text-align:center;
+	font-weight:bold;
+	cursor:pointer;
+}
