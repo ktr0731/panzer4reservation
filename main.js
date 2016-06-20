@@ -90,22 +90,21 @@ casper.thenEvaluate(function(config) {
 
 casper.then(function() {
   this.capture("./img/select-target-seats.png");
-  this.echo(phantom.cookies);
 });
 
 casper.then(function() {
-  this.wait(2000, function() {
+  this.wait(5000, function() {
     this.echo("Title" + this.getTitle());
     this.capture("./img/confirmation.png");
 
-    this.then(function() {
-      $("settle_tickets_with_last_card").trigger("click");
+    this.thenEvaluate(function() {
+      $("#settle_tickets_with_last_card").trigger("click");
     });
   });
 });
 
 casper.then(function() {
-  this.wait(3000, function() {
+  this.wait(2000, function() {
     this.echo("Title" + this.getTitle());
     this.capture("./img/finish.png");
   });
