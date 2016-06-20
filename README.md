@@ -1,5 +1,6 @@
 Panzer 4 Reservation
 ====
+Last check: Jun. 20, 2016.
 
 ![GIRLS & PANZER der FILM](./gup.jpg)
 
@@ -33,7 +34,7 @@ $ brew install phantomjs
 $ npm install
 ```
 
-3. Edit config.json.
+3. Edit `config.json`.
 ``` json  
 {
   "targetDate" : 22,
