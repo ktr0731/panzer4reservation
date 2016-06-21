@@ -76,11 +76,11 @@ casper.thenEvaluate(function(config) {
         // Set friends information
         $("#gender_"    + seats[i][j]).val("1").change();
         $("#age_group_" + seats[i][j]).val("13").change();
-        // if (emails[j - 1]) {
-          // document.querySelector("#discount_" + seats[i][j]).selectedIndex = 1;
-        //   $("#discount_" + seats[i][j]).val("1").change();
-        //   $("#address_"  + seats[i][j]).val(emails[j - 1]).change();
-        // }
+        if (emails[j - 1]) {
+          document.querySelector("#discount_" + seats[i][j]).selectedIndex = 1;
+          $("#discount_" + seats[i][j]).val("1").change();
+          $("#address_"  + seats[i][j]).val(emails[j - 1]).change();
+        }
       }
     }
     $("#reserve-now-button").trigger("click");

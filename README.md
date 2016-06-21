@@ -23,17 +23,8 @@ But it is cheap. I can not bear responsibility.
 - CasperJS
 
 ## Installation
-1. If PhantomJS does not exist, you should install it.  
-For OS X:  
-``` sh
-$ brew install phantomjs
-```
-
-2. npm.
-``` sh
-$ npm install
-```
-
+1. If PhantomJS does not exist, you should install it. For OS X:  `$ brew install phantomjs`  
+2. npm. `$ npm install`
 3. Edit `config.json`.
 ``` json  
 {
@@ -51,6 +42,10 @@ $ npm install
 ```
 `wishSeats` is request order. If you can get seats set, then finish check sequence.  
 If friends are sinema citizen, please fill emails. Unnesessary your email.  
+
+## Attention
+Sorry, this script is not doing error handlings.  
+If you hope see doing result, look `img` directory.  
 
 ## License
 Please see LICENSE.
