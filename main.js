@@ -33,12 +33,12 @@ casper.thenEvaluate(function(email, password) {
 }, system.env.EMAIL, system.env.PASSWORD);
 
 casper.then(function() {
-  this.capture("./img/login1.png");
+  this.capture("./img/1_login1.png");
 })
 
 // Capture screen shot for test
 casper.thenOpen(MYPAGE_URL, function() {
-  this.capture("./img/login2.png");
+  this.capture("./img/2_login2.png");
 });
 
 // Go to GuP page and select target date
@@ -52,7 +52,7 @@ casper.thenOpenAndEvaluate(GUP_URL, function(targetDate) {
 }, config.targetDate);
 
 casper.then(function() {
-  this.capture("./img/select-target-date.png");
+  this.capture("./img/3_select-target-date.png");
 });
 
 // Select wish seats
@@ -89,13 +89,13 @@ casper.thenEvaluate(function(config) {
 }, config);
 
 casper.then(function() {
-  this.capture("./img/select-target-seats.png");
+  this.capture("./img/4_select-target-seats.png");
 });
 
 casper.then(function() {
   this.wait(5000, function() {
     this.echo("Title" + this.getTitle());
-    this.capture("./img/confirmation.png");
+    this.capture("./img/5_confirmation.png");
 
     this.thenEvaluate(function() {
       $("#settle_tickets_with_last_card").trigger("click");
@@ -106,7 +106,7 @@ casper.then(function() {
 casper.then(function() {
   this.wait(2000, function() {
     this.echo("Title" + this.getTitle());
-    this.capture("./img/finish.png");
+    this.capture("./img/6_finish.png");
   });
 });
 

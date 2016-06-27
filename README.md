@@ -43,6 +43,12 @@ But it is cheap. I can not bear responsibility.
 `wishSeats` is request order. If you can get seats set, then finish check sequence.  
 If friends are sinema citizen, please fill emails. Unnesessary your email.  
 
+## Usage
+
+``` sh
+$ casperjs main.js
+```
+
 ## Attention
 Sorry, this script is not doing error handlings.  
 If you hope see doing result, look `img` directory.  
