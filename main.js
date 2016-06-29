@@ -15,6 +15,11 @@ var casper = require("casper").create({
 });
 casper.userAgent("Mozilla/5.0 (Macintosh; Intel Mac OS X 10_11_5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/51.0.2704.84 Safari/537.36");
 
+if (!system.env.EMAIL || !system.env.PASSWORD) {
+  console.log("Please set your environment variables EMAIL or PASSWORD!");
+  exit(1);
+}
+
 var GUP_URL= "https://res.cinemacity.co.jp/TicketReserver/studio/movie/510";
 // var GUP_URL= "http://localhost:8888";
 var LOGIN_URL = "https://res.cinemacity.co.jp/TicketReserver/login";

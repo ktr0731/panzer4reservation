@@ -1,7 +1,10 @@
 {
-  "targetDate" : 2,
+  "targetDate" : 4,
   "wishSeats" : [
-    [ "C20" ]
+    [ "E12" ],
+    [ "E11" ],
+    [ "F12" ],
+    [ "F11" ]
   ],
   "emails" : [
     "hoge@fuga.co.jp"
