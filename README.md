@@ -2,13 +2,13 @@ Panzer 4 Reservation
 ====
 Last check: Jun. 20, 2016.
 
+A reservation script for GIRLS und PANZER der FILM.  
+
 ![GIRLS & PANZER der FILM](./gup.jpg)
 
-A reservation script for GIRLS & PANZER der FILM.  
-
 ## Description  
-In cinemacity in Tachikawa city, Tokyo, that theater is showing GIRLS & PANZER der FILM with a roar.  
-A lot of people says, "Garupan ha iizo.". It means, "GIRLS & PANZER is good.".  
+In cinemacity in Tachikawa city, Tokyo, that theater is showing GIRLS und PANZER der FILM with a roar.  
+A lot of people says, "Garupan ha iizo.". It means, "GIRLS und PANZER is good.".  
 I agree that idea too.  
 
 But, cinemacity is very popular. It is difficult for me get wish seats.  
